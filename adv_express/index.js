@@ -1,5 +1,4 @@
 const config = require('config');
-const Joi = require('joi');
 const express = require('express');
 const logger = require('./middleware/logger.js')
 const helmet = require('helmet');
@@ -31,7 +30,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'));
 app.use(helmet());
-app.use (logger);
+app.use(logger);
 
 app.use('/api/courses', courses);
 app.use('/', home);

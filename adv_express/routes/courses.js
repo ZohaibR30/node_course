@@ -1,4 +1,5 @@
 const express = require('express');
+const Joi = require('joi');
 const router = express.Router();
 
 const courses = [
@@ -6,7 +7,6 @@ const courses = [
     {id: 2, name: 'course 2'},
     {id: 3, name: 'course 3'},
 ];
-
 
 router.get('/', (req, res) => {
     res.send(courses);
